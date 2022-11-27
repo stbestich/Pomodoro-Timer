@@ -1,2 +1,0 @@
-# Pomodoro Timer
- by stbestichhh
