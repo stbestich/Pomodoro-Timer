@@ -37,7 +37,9 @@
             // 
             // StartButton
             // 
-            this.StartButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.StartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StartButton.BackColor = System.Drawing.Color.Transparent;
             this.StartButton.BorderRadius = 4;
             this.StartButton.BorderThickness = 3;
@@ -60,6 +62,9 @@
             // 
             // ButtonPanel
             // 
+            this.ButtonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
             this.ButtonPanel.Location = new System.Drawing.Point(68, 348);
             this.ButtonPanel.Name = "ButtonPanel";
