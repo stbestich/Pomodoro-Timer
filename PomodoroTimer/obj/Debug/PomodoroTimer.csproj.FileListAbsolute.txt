@@ -11,3 +11,4 @@ P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\obj\Debug\PomodoroTimer.csproj.Co
 P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\obj\Debug\PomodoroTimer.csproj.CopyComplete
 P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\obj\Debug\PomodoroTimer.exe
 P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\obj\Debug\PomodoroTimer.pdb
+P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\bin\Debug\WindowsInput.dll

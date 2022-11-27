@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
-
-
+//s - Start 
+//e - End
+//jf - Jump form
+//jt - Jumo to
 
 namespace PomodoroTimer
 {
@@ -29,7 +24,26 @@ namespace PomodoroTimer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            
         }
+
+        //s Анимация кнопки
+        private void StartButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            StartButton.Location = new Point(StartButton.Location.X, StartButton.Location.Y + 4);
+
+            //s Звук при нажатии кнопки
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.Stream resourceStream = assembly.GetManifestResourceStream(@"PomodoroTimer.pressedButtonSound.wav");
+            SoundPlayer buttonSound = new SoundPlayer(resourceStream);
+            buttonSound.Play();
+            //e Звук при нажатии кнопки
+        }
+
+        private void StartButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            StartButton.Location = new Point(StartButton.Location.X, StartButton.Location.Y - 4);
+        }
+        //e Анимация кнопки
     }
 }

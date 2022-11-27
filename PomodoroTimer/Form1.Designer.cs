@@ -30,40 +30,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.StartButton = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.ButtonPanelElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // StartButton
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 4;
-            this.guna2Button1.BorderThickness = 3;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.guna2Button1.Location = new System.Drawing.Point(66, 276);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(252, 82);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "POMODORO!";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.StartButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.StartButton.BackColor = System.Drawing.Color.Transparent;
+            this.StartButton.BorderRadius = 4;
+            this.StartButton.BorderThickness = 3;
+            this.StartButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.StartButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.StartButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.StartButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.StartButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.StartButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.StartButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.StartButton.Location = new System.Drawing.Point(66, 276);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(252, 82);
+            this.StartButton.TabIndex = 0;
+            this.StartButton.Text = "POMODORO!";
+            this.StartButton.UseTransparentBackground = true;
+            this.StartButton.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.StartButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StartButton_MouseDown);
+            this.StartButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.StartButton_MouseUp);
             // 
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.ButtonPanel.Location = new System.Drawing.Point(67, 343);
+            this.ButtonPanel.Location = new System.Drawing.Point(68, 348);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(250, 20);
+            this.ButtonPanel.Size = new System.Drawing.Size(248, 13);
             this.ButtonPanel.TabIndex = 1;
             // 
             // ButtonPanelElipse
@@ -77,7 +77,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(382, 553);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ButtonPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -92,7 +92,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button StartButton;
         private Guna.UI2.WinForms.Guna2Panel ButtonPanel;
         private Guna.UI2.WinForms.Guna2Elipse ButtonPanelElipse;
     }
