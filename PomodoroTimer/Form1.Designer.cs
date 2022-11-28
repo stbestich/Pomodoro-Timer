@@ -42,6 +42,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Minutes = new System.Windows.Forms.Label();
+            this.Seconds = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartButton
@@ -198,12 +200,39 @@
             this.guna2Elipse3.BorderRadius = 10;
             this.guna2Elipse3.TargetControl = this.UnpausePanel;
             // 
+            // Minutes
+            // 
+            this.Minutes.AutoSize = true;
+            this.Minutes.BackColor = System.Drawing.Color.Transparent;
+            this.Minutes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 49.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Minutes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.Minutes.Location = new System.Drawing.Point(-2, 165);
+            this.Minutes.Name = "Minutes";
+            this.Minutes.Size = new System.Drawing.Size(140, 97);
+            this.Minutes.TabIndex = 8;
+            this.Minutes.Text = "00";
+            // 
+            // Seconds
+            // 
+            this.Seconds.AutoSize = true;
+            this.Seconds.BackColor = System.Drawing.Color.Transparent;
+            this.Seconds.Font = new System.Drawing.Font("Arial Rounded MT Bold", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Seconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.Seconds.Location = new System.Drawing.Point(121, 178);
+            this.Seconds.Name = "Seconds";
+            this.Seconds.Size = new System.Drawing.Size(119, 81);
+            this.Seconds.TabIndex = 10;
+            this.Seconds.Text = "00";
+            this.Seconds.Click += new System.EventHandler(this.Seconds_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(382, 553);
+            this.Controls.Add(this.Minutes);
+            this.Controls.Add(this.Seconds);
             this.Controls.Add(this.StopButton);
             this.Controls.Add(this.PauseButon);
             this.Controls.Add(this.UnpauseButon);
@@ -216,10 +245,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pomodoro Timer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -237,6 +267,8 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.Label Minutes;
+        private System.Windows.Forms.Label Seconds;
     }
 }
 

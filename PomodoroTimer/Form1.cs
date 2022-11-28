@@ -12,6 +12,13 @@ namespace PomodoroTimer
 {
     public partial class Form1 : Form
     {
+        private void Seconds_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         //s Button control
         void TimerStarted()
         {
@@ -25,6 +32,9 @@ namespace PomodoroTimer
             UnpausePanel.Show();
             StopPanel.Show();
             PlayPanel.Show();
+
+            Minutes.Show();
+            Seconds.Show();
         }
 
         void TimerStoped()
@@ -39,6 +49,9 @@ namespace PomodoroTimer
             UnpausePanel.Hide();
             StopPanel.Hide();
             PlayPanel.Hide();
+
+            Minutes.Hide();
+            Seconds.Hide();
         }
 
         void ButtonSoundEffect()
