@@ -206,7 +206,7 @@
             this.Minutes.BackColor = System.Drawing.Color.Transparent;
             this.Minutes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 49.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minutes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.Minutes.Location = new System.Drawing.Point(-2, 165);
+            this.Minutes.Location = new System.Drawing.Point(23, 163);
             this.Minutes.Name = "Minutes";
             this.Minutes.Size = new System.Drawing.Size(140, 97);
             this.Minutes.TabIndex = 8;
@@ -218,7 +218,7 @@
             this.Seconds.BackColor = System.Drawing.Color.Transparent;
             this.Seconds.Font = new System.Drawing.Font("Arial Rounded MT Bold", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Seconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.Seconds.Location = new System.Drawing.Point(121, 178);
+            this.Seconds.Location = new System.Drawing.Point(146, 176);
             this.Seconds.Name = "Seconds";
             this.Seconds.Size = new System.Drawing.Size(119, 81);
             this.Seconds.TabIndex = 10;
