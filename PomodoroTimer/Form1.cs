@@ -17,6 +17,17 @@ namespace PomodoroTimer
 
         }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
 
 
         //s Button control
@@ -24,6 +35,12 @@ namespace PomodoroTimer
         {
             StartButton.Hide();
             ButtonPanel.Hide();
+            LogoBox.Hide();
+            guna2Button1.Hide();
+            guna2Button2.Hide();
+
+            ShortBreakPanel.Hide();
+            LongBreakPanel.Hide();
 
             UnpauseButon.Show();
             PauseButon.Show();
@@ -33,6 +50,8 @@ namespace PomodoroTimer
             StopPanel.Show();
             PlayPanel.Show();
 
+            CHiloutLabel.Hide();
+
             Minutes.Show();
             Seconds.Show();
         }
@@ -41,6 +60,12 @@ namespace PomodoroTimer
         {
             StartButton.Show();
             ButtonPanel.Show();
+            LogoBox.Show();
+            guna2Button1.Show();
+            guna2Button2.Show();
+
+            ShortBreakPanel.Show();
+            LongBreakPanel.Show();
 
             UnpauseButon.Hide();
             PauseButon.Hide();
@@ -49,6 +74,8 @@ namespace PomodoroTimer
             UnpausePanel.Hide();
             StopPanel.Hide();
             PlayPanel.Hide();
+
+            CHiloutLabel.Show();
 
             Minutes.Hide();
             Seconds.Hide();
@@ -64,6 +91,66 @@ namespace PomodoroTimer
             //e Звук при нажатии кнопки
         }
         //e Button control
+
+
+        void TimerStoppedSoundEffect()
+        {
+            System.Reflection.Assembly assembly1 = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.Stream resourceStream1 = assembly1.GetManifestResourceStream(@"PomodoroTimer.TimerStoppedSoundEffect.wav");
+            SoundPlayer TimerStoppedSoundEffect = new SoundPlayer(resourceStream1);
+            TimerStoppedSoundEffect.Play(); 
+        }
+
+
+
+
+        //s Timer Control
+        private int timeLeft;
+
+        void TimerControl()
+        {
+            this.timeLeft = 25 * 60;
+            Minutes.Text = (this.timeLeft / 60).ToString("00");
+            Seconds.Text = (this.timeLeft % 60).ToString("00");
+            timerCtrl.Start();
+        }
+
+        //s 5 minutes Break
+        void shortBreak()
+        {
+            this.timeLeft = 5 * 60;
+            Minutes.Text = (this.timeLeft / 60).ToString("00");
+            Seconds.Text = (this.timeLeft % 60).ToString("00");
+            timerCtrl.Start();
+        }
+        //e 5 minutes break
+
+        //s 15 minutes break
+        void longBreak()
+        {
+            this.timeLeft = 15 * 60;
+            Minutes.Text = (this.timeLeft / 60).ToString("00");
+            Seconds.Text = (this.timeLeft % 60).ToString("00");
+            timerCtrl.Start();
+        }
+        //e 15 minutes break
+
+        private void timerCtrl_Tick(object sender, EventArgs e)
+        {
+            if (this.timeLeft == 0)
+            {
+                timerCtrl.Stop();
+                TimeIsUpForm messageform = new TimeIsUpForm();
+                messageform.ShowDialog();
+            }
+            else
+            {
+                this.timeLeft--;
+                Minutes.Text = (this.timeLeft / 60).ToString("00");
+                Seconds.Text = (this.timeLeft % 60).ToString("00");
+            }
+        }
+        //e Timer Control
 
 
 
@@ -95,12 +182,16 @@ namespace PomodoroTimer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MaximizeBox = false;
         }
+
+
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             TimerStarted();
+            TimerControl();
         }
 
         //s Анимация кнопки
@@ -140,7 +231,7 @@ namespace PomodoroTimer
         //Pause Button
         private void PauseButon_Click(object sender, EventArgs e)
         {
-            
+            timerCtrl.Stop();
         }
 
         private void PauseButon_MouseDown(object sender, MouseEventArgs e)
@@ -159,7 +250,7 @@ namespace PomodoroTimer
         //Unpase Button
         private void UnpauseButon_Click(object sender, EventArgs e)
         {
-
+            timerCtrl.Start();
         }
 
         private void UnpauseButon_MouseDown(object sender, MouseEventArgs e)
@@ -171,6 +262,45 @@ namespace PomodoroTimer
         private void UnpauseButon_MouseUp(object sender, MouseEventArgs e)
         {
             UnpauseButon.Location = new Point(UnpauseButon.Location.X, UnpauseButon.Location.Y - 4);
+        }
+
+        
+        //Short break button
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            TimerStarted();
+            shortBreak();
+        }
+
+        private void guna2Button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            guna2Button1.Location = new Point(guna2Button1.Location.X, guna2Button1.Location.Y + 4);
+            ButtonSoundEffect();
+        }
+
+        private void guna2Button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            guna2Button1.Location = new Point(guna2Button1.Location.X, guna2Button1.Location.Y - 4);
+        }
+
+
+
+        //Long Break button
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            TimerStarted();
+            longBreak();
+        }
+
+        private void guna2Button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            guna2Button2.Location = new Point(guna2Button2.Location.X, guna2Button2.Location.Y + 4);
+            ButtonSoundEffect();
+        }
+
+        private void guna2Button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            guna2Button2.Location = new Point(guna2Button2.Location.X, guna2Button2.Location.Y - 4);
         }
     }
 }

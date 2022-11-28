@@ -44,6 +44,17 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Minutes = new System.Windows.Forms.Label();
             this.Seconds = new System.Windows.Forms.Label();
+            this.LogoBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timerCtrl = new System.Windows.Forms.Timer(this.components);
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.LongBreakPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ShortBreakPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.CHiloutLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StartButton
@@ -211,19 +222,135 @@
             this.Minutes.Size = new System.Drawing.Size(140, 97);
             this.Minutes.TabIndex = 8;
             this.Minutes.Text = "00";
+            this.Minutes.Visible = false;
             // 
             // Seconds
             // 
             this.Seconds.AutoSize = true;
             this.Seconds.BackColor = System.Drawing.Color.Transparent;
-            this.Seconds.Font = new System.Drawing.Font("Arial Rounded MT Bold", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Seconds.Font = new System.Drawing.Font("Arial Rounded MT Bold", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Seconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.Seconds.Location = new System.Drawing.Point(146, 176);
+            this.Seconds.Location = new System.Drawing.Point(150, 182);
             this.Seconds.Name = "Seconds";
-            this.Seconds.Size = new System.Drawing.Size(119, 81);
+            this.Seconds.Size = new System.Drawing.Size(106, 73);
             this.Seconds.TabIndex = 10;
             this.Seconds.Text = "00";
+            this.Seconds.Visible = false;
             this.Seconds.Click += new System.EventHandler(this.Seconds_Click);
+            // 
+            // LogoBox
+            // 
+            this.LogoBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoBox.BackColor = System.Drawing.Color.Transparent;
+            this.LogoBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoBox.Image")));
+            this.LogoBox.ImageRotate = 0F;
+            this.LogoBox.Location = new System.Drawing.Point(12, 12);
+            this.LogoBox.Name = "LogoBox";
+            this.LogoBox.Size = new System.Drawing.Size(358, 258);
+            this.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoBox.TabIndex = 11;
+            this.LogoBox.TabStop = false;
+            this.LogoBox.UseTransparentBackground = true;
+            // 
+            // NotifyIcon
+            // 
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "notifyIcon1";
+            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
+            // 
+            // timerCtrl
+            // 
+            this.timerCtrl.Interval = 1000;
+            this.timerCtrl.Tick += new System.EventHandler(this.timerCtrl_Tick);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2Button2.BorderRadius = 4;
+            this.guna2Button2.BorderThickness = 3;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.guna2Button2.Location = new System.Drawing.Point(200, 436);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(118, 69);
+            this.guna2Button2.TabIndex = 14;
+            this.guna2Button2.Text = "15 MIN!";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
+            this.guna2Button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2Button2_MouseDown);
+            this.guna2Button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.guna2Button2_MouseUp);
+            // 
+            // LongBreakPanel
+            // 
+            this.LongBreakPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LongBreakPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.LongBreakPanel.Location = new System.Drawing.Point(203, 495);
+            this.LongBreakPanel.Name = "LongBreakPanel";
+            this.LongBreakPanel.Size = new System.Drawing.Size(114, 13);
+            this.LongBreakPanel.TabIndex = 15;
+            this.LongBreakPanel.Visible = false;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 10;
+            this.guna2Elipse4.TargetControl = this.ShortBreakPanel;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 10;
+            this.guna2Elipse5.TargetControl = this.LongBreakPanel;
+            // 
+            // ShortBreakPanel
+            // 
+            this.ShortBreakPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShortBreakPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.ShortBreakPanel.Location = new System.Drawing.Point(69, 495);
+            this.ShortBreakPanel.Name = "ShortBreakPanel";
+            this.ShortBreakPanel.Size = new System.Drawing.Size(114, 13);
+            this.ShortBreakPanel.TabIndex = 13;
+            this.ShortBreakPanel.Visible = false;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2Button1.BorderRadius = 4;
+            this.guna2Button1.BorderThickness = 3;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.guna2Button1.Location = new System.Drawing.Point(66, 436);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(118, 69);
+            this.guna2Button1.TabIndex = 12;
+            this.guna2Button1.Text = "5 MIN!";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            this.guna2Button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2Button1_MouseDown);
+            this.guna2Button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.guna2Button1_MouseUp);
+            // 
+            // CHiloutLabel
+            // 
+            this.CHiloutLabel.AutoSize = true;
+            this.CHiloutLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CHiloutLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHiloutLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(159)))), ((int)(((byte)(122)))));
+            this.CHiloutLabel.Location = new System.Drawing.Point(115, 401);
+            this.CHiloutLabel.Name = "CHiloutLabel";
+            this.CHiloutLabel.Size = new System.Drawing.Size(160, 32);
+            this.CHiloutLabel.TabIndex = 16;
+            this.CHiloutLabel.Text = "CHILLOUT";
             // 
             // Form1
             // 
@@ -231,6 +358,11 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(382, 553);
+            this.Controls.Add(this.CHiloutLabel);
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.LongBreakPanel);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.ShortBreakPanel);
             this.Controls.Add(this.Minutes);
             this.Controls.Add(this.Seconds);
             this.Controls.Add(this.StopButton);
@@ -241,13 +373,16 @@
             this.Controls.Add(this.StopPanel);
             this.Controls.Add(this.UnpausePanel);
             this.Controls.Add(this.PlayPanel);
+            this.Controls.Add(this.LogoBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pomodoro Timer";
+            this.Text = "POMODORO!";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,6 +404,16 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Label Minutes;
         private System.Windows.Forms.Label Seconds;
+        private Guna.UI2.WinForms.Guna2PictureBox LogoBox;
+        private System.Windows.Forms.NotifyIcon NotifyIcon;
+        private System.Windows.Forms.Timer timerCtrl;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Panel LongBreakPanel;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Guna.UI2.WinForms.Guna2Panel ShortBreakPanel;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label CHiloutLabel;
     }
 }
 
