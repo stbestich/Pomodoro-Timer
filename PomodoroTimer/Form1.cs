@@ -17,6 +17,12 @@ namespace PomodoroTimer
             InitializeComponent();
         }
 
+        private void TimerStarted()
+        {
+            StartButton.Hide();
+            ButtonPanel.Hide();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -24,7 +30,7 @@ namespace PomodoroTimer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+            TimerStarted();
         }
 
         //s Анимация кнопки

@@ -56,6 +56,7 @@
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "POMODORO!";
             this.StartButton.UseTransparentBackground = true;
+            this.StartButton.Visible = false;
             this.StartButton.Click += new System.EventHandler(this.guna2Button1_Click);
             this.StartButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StartButton_MouseDown);
             this.StartButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.StartButton_MouseUp);
