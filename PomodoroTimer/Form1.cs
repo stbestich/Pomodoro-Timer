@@ -26,10 +26,9 @@ namespace PomodoroTimer
             ButtonPanel.Hide();
 
             UnpauseButon.Show();
-            PauseButon.Show();
             StopButton.Show();
 
-            UnpausePanel.Show();
+            UnpausePanel.Hide();
             StopPanel.Show();
             PlayPanel.Show();
 
@@ -43,10 +42,7 @@ namespace PomodoroTimer
             ButtonPanel.Show();
 
             UnpauseButon.Hide();
-            PauseButon.Hide();
             StopButton.Hide();
-
-            UnpausePanel.Hide();
             StopPanel.Hide();
             PlayPanel.Hide();
 
@@ -137,25 +133,7 @@ namespace PomodoroTimer
 
         
         
-        //Pause Button
-        private void PauseButon_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void PauseButon_MouseDown(object sender, MouseEventArgs e)
-        {
-            PauseButon.Location = new Point(PauseButon.Location.X, PauseButon.Location.Y + 4);
-            ButtonSoundEffect();
-        }
-
-        private void PauseButon_MouseUp(object sender, MouseEventArgs e)
-        {
-            PauseButon.Location = new Point(PauseButon.Location.X, PauseButon.Location.Y - 4);
-        }
-
-        
-        
         //Unpase Button
         private void UnpauseButon_Click(object sender, EventArgs e)
         {
