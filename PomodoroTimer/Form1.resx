@@ -137,6 +137,18 @@
         SUVORK5CYII=
 </value>
   </data>
+  <data name="PauseButon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAAAW1JREFUaEPt
+        mUFKA1EUBHO12eqBEu9i8GSKhOQcOmAtZKiGwEzvXkHt6v0+wD8NwzAMwzAcx/J+fl2u56/levkJfi4f
+        by/kkaPe2c06dNsMm9/kkbU55J3dyKhKHrEbk7yHjZrkEbsxyXvYqEkesRuTvIeNmuQRuzHJe9ioSR6x
+        G5O8h42a5BG7Mcl72KhJHrEbk7yHjZrkEbsxyXvYqEkesRuTvIeNmuQRuzHJe9ioSR6xG5O8h42a5BG7
+        Mcl72KhJHrEbk7yHjZrkEbsxyXvYqEkesRuTvIeNmuQRuzHJe9ioSR6xG5O8h42a5BG7Mcl72KhJHrEb
+        k7yHjZrkEbsxyXvYqEkesRuTvIeNmuQRuzHJe9ioSR6xG5O8h42a5BG7Mcl72KhJHrEbk7yHjZrkEbsx
+        yXvYqEkesRuTvIeNmuQRuzHJe6wj9+2oeCOPrM0h7+zm7xvk8tgM//f+/HfK/neGYRiGYRie5XT6Bekg
+        zVJR7DZuAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="StopButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAQVJREFUaEPt

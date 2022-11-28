@@ -34,6 +34,7 @@
             this.ButtonPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.ButtonPanelElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.UnpauseButon = new Guna.UI2.WinForms.Guna2Button();
+            this.PauseButon = new Guna.UI2.WinForms.Guna2Button();
             this.StopButton = new Guna.UI2.WinForms.Guna2Button();
             this.UnpausePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.PlayPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -97,14 +98,38 @@
             this.UnpauseButon.FillColor = System.Drawing.Color.Transparent;
             this.UnpauseButon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
             this.UnpauseButon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.UnpauseButon.Location = new System.Drawing.Point(203, 289);
+            this.UnpauseButon.Location = new System.Drawing.Point(248, 289);
             this.UnpauseButon.Name = "UnpauseButon";
-            this.UnpauseButon.Size = new System.Drawing.Size(141, 69);
+            this.UnpauseButon.Size = new System.Drawing.Size(98, 69);
             this.UnpauseButon.TabIndex = 2;
             this.UnpauseButon.Visible = false;
             this.UnpauseButon.Click += new System.EventHandler(this.UnpauseButon_Click);
             this.UnpauseButon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UnpauseButon_MouseDown);
             this.UnpauseButon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UnpauseButon_MouseUp);
+            // 
+            // PauseButon
+            // 
+            this.PauseButon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PauseButon.BackColor = System.Drawing.Color.Transparent;
+            this.PauseButon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PauseButon.BackgroundImage")));
+            this.PauseButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PauseButon.BorderRadius = 4;
+            this.PauseButon.BorderThickness = 3;
+            this.PauseButon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PauseButon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PauseButon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PauseButon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PauseButon.FillColor = System.Drawing.Color.Transparent;
+            this.PauseButon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F);
+            this.PauseButon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
+            this.PauseButon.Location = new System.Drawing.Point(144, 289);
+            this.PauseButon.Name = "PauseButon";
+            this.PauseButon.Size = new System.Drawing.Size(98, 69);
+            this.PauseButon.TabIndex = 3;
+            this.PauseButon.Visible = false;
+            this.PauseButon.Click += new System.EventHandler(this.PauseButon_Click);
+            this.PauseButon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PauseButon_MouseDown);
+            this.PauseButon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PauseButon_MouseUp);
             // 
             // StopButton
             // 
@@ -123,7 +148,7 @@
             this.StopButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
             this.StopButton.Location = new System.Drawing.Point(40, 289);
             this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(141, 69);
+            this.StopButton.Size = new System.Drawing.Size(98, 69);
             this.StopButton.TabIndex = 4;
             this.StopButton.Visible = false;
             this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
@@ -144,9 +169,9 @@
             // 
             this.PlayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PlayPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.PlayPanel.Location = new System.Drawing.Point(205, 348);
+            this.PlayPanel.Location = new System.Drawing.Point(250, 348);
             this.PlayPanel.Name = "PlayPanel";
-            this.PlayPanel.Size = new System.Drawing.Size(137, 13);
+            this.PlayPanel.Size = new System.Drawing.Size(94, 13);
             this.PlayPanel.TabIndex = 6;
             this.PlayPanel.Visible = false;
             // 
@@ -156,7 +181,7 @@
             this.StopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
             this.StopPanel.Location = new System.Drawing.Point(43, 348);
             this.StopPanel.Name = "StopPanel";
-            this.StopPanel.Size = new System.Drawing.Size(137, 13);
+            this.StopPanel.Size = new System.Drawing.Size(94, 13);
             this.StopPanel.TabIndex = 7;
             this.StopPanel.Visible = false;
             // 
@@ -181,12 +206,11 @@
             this.Minutes.BackColor = System.Drawing.Color.Transparent;
             this.Minutes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 49.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minutes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.Minutes.Location = new System.Drawing.Point(26, 163);
+            this.Minutes.Location = new System.Drawing.Point(-2, 165);
             this.Minutes.Name = "Minutes";
             this.Minutes.Size = new System.Drawing.Size(140, 97);
             this.Minutes.TabIndex = 8;
             this.Minutes.Text = "00";
-            this.Minutes.Visible = false;
             // 
             // Seconds
             // 
@@ -194,12 +218,11 @@
             this.Seconds.BackColor = System.Drawing.Color.Transparent;
             this.Seconds.Font = new System.Drawing.Font("Arial Rounded MT Bold", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Seconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(157)))), ((int)(((byte)(120)))));
-            this.Seconds.Location = new System.Drawing.Point(149, 176);
+            this.Seconds.Location = new System.Drawing.Point(121, 178);
             this.Seconds.Name = "Seconds";
             this.Seconds.Size = new System.Drawing.Size(119, 81);
             this.Seconds.TabIndex = 10;
             this.Seconds.Text = "00";
-            this.Seconds.Visible = false;
             this.Seconds.Click += new System.EventHandler(this.Seconds_Click);
             // 
             // Form1
@@ -211,6 +234,7 @@
             this.Controls.Add(this.Minutes);
             this.Controls.Add(this.Seconds);
             this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.PauseButon);
             this.Controls.Add(this.UnpauseButon);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ButtonPanel);
@@ -235,6 +259,7 @@
         private Guna.UI2.WinForms.Guna2Panel ButtonPanel;
         private Guna.UI2.WinForms.Guna2Elipse ButtonPanelElipse;
         private Guna.UI2.WinForms.Guna2Button UnpauseButon;
+        private Guna.UI2.WinForms.Guna2Button PauseButon;
         private Guna.UI2.WinForms.Guna2Button StopButton;
         private Guna.UI2.WinForms.Guna2Panel UnpausePanel;
         private Guna.UI2.WinForms.Guna2Panel PlayPanel;
