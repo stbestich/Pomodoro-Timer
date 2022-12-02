@@ -179,6 +179,17 @@ namespace PomodoroTimer
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             TimerStarted();
+
+            Minutes.ForeColor = Color.FromArgb(65, 157, 120);
+            Seconds.ForeColor = Color.FromArgb(65, 157, 120);
+            StopPanel.BackColor = Color.FromArgb(65, 157, 120);
+            UnpausePanel.BackColor = Color.FromArgb(65, 157, 120);
+            PlayPanel.BackColor = Color.FromArgb(65, 157, 120);
+
+            StopButton.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\stop_48px.png");
+            PauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\pause_52px.png");
+            UnpauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\play_48px.png");
+
             TimerControl();
         }
 
