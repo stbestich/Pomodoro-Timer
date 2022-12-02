@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".nuget\mouse-keyboard-hook-logo.png" />
+    <EmbeddedResource Include="TimerStoppedSoundEffect.wav" />
     <EmbeddedResource Include="pressedButtonSound.wav" />
   </ItemGroup>
   <ItemGroup>

@@ -3,10 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
 
-//s - Start 
-//e - End
-//jf - Jump form
-//jt - Jumo to
 
 namespace PomodoroTimer
 {
@@ -140,6 +136,7 @@ namespace PomodoroTimer
             if (this.timeLeft == 0)
             {
                 timerCtrl.Stop();
+                TimerStoppedSoundEffect();
                 TimeIsUpForm messageform = new TimeIsUpForm();
                 messageform.ShowDialog();
             }

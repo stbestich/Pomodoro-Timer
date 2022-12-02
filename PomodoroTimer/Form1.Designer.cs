@@ -50,8 +50,8 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.LongBreakPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ShortBreakPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.CHiloutLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
@@ -302,11 +302,6 @@
             this.guna2Elipse4.BorderRadius = 10;
             this.guna2Elipse4.TargetControl = this.ShortBreakPanel;
             // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 10;
-            this.guna2Elipse5.TargetControl = this.LongBreakPanel;
-            // 
             // ShortBreakPanel
             // 
             this.ShortBreakPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -316,6 +311,11 @@
             this.ShortBreakPanel.Size = new System.Drawing.Size(114, 13);
             this.ShortBreakPanel.TabIndex = 13;
             this.ShortBreakPanel.Visible = false;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 10;
+            this.guna2Elipse5.TargetControl = this.LongBreakPanel;
             // 
             // guna2Button1
             // 

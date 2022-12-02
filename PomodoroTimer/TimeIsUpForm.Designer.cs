@@ -108,7 +108,10 @@
             this.Controls.Add(this.OKButtonPanel);
             this.Controls.Add(this.ShortBreakPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TimeIsUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMODORO! *NEW MESSAGE!";
             this.ResumeLayout(false);
             this.PerformLayout();
