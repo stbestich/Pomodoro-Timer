@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ ██████╗████████╗   ██████╗ ███████╗ ██████╗████████╗██╗ █████╗ ██╗  ██╗██╗  ██╗██╗  ██╗
+██╔════╝╚══██╔══╝   ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██║██╔══██╗██║  ██║██║  ██║██║  ██║
+╚█████╗    ██║      ██████╦╝█████   ╚█████╗    ██║   ██║██║  ╚═╝███████║███████║███████║
+ ╚═══██╗   ██║      ██╔══██╗██╔══╝   ╚═══██╗   ██║   ██║██║  ██╗██╔══██║██╔══██║██╔══██║
+██████╔╝   ██║   ██╗██████╦╝███████╗██████╔╝   ██║   ██║╚█████╔╝██║  ██║██║  ██║██║  ██║
+╚═════╝    ╚═╝   ╚═╝╚═════╝ ╚══════╝╚═════╝    ╚═╝   ╚═╝ ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝                              
+*/
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
@@ -8,6 +16,7 @@ namespace PomodoroTimer
 {
     public partial class Form1 : Form
     {
+        #region --Ненужные методы--
         private void Seconds_Click(object sender, EventArgs e)
         {
 
@@ -22,11 +31,9 @@ namespace PomodoroTimer
         {
 
         }
+        #endregion
 
-
-
-
-        //s Button control
+        #region --Управление кнопками--
         void TimerStarted()
         {
             StartButton.Hide();
@@ -86,8 +93,6 @@ namespace PomodoroTimer
             buttonSound.Play();
             //e Звук при нажатии кнопки
         }
-        //e Button control
-
 
         void TimerStoppedSoundEffect()
         {
@@ -96,11 +101,9 @@ namespace PomodoroTimer
             SoundPlayer TimerStoppedSoundEffect = new SoundPlayer(resourceStream1);
             TimerStoppedSoundEffect.Play(); 
         }
+        #endregion
 
-
-
-
-        //s Timer Control
+        #region --Управление Таймером--
         private int timeLeft;
 
         void TimerControl()
@@ -147,29 +150,7 @@ namespace PomodoroTimer
                 Seconds.Text = (this.timeLeft % 60).ToString("00");
             }
         }
-        //e Timer Control
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        #endregion
 
 
         public Form1()
@@ -182,16 +163,13 @@ namespace PomodoroTimer
             MaximizeBox = false;
         }
 
-
-
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             TimerStarted();
             TimerControl();
         }
 
-        //s Анимация кнопки
+        //Start Button
         private void StartButton_MouseDown(object sender, MouseEventArgs e)
         {
             StartButton.Location = new Point(StartButton.Location.X, StartButton.Location.Y + 4);
@@ -202,9 +180,6 @@ namespace PomodoroTimer
         {
             StartButton.Location = new Point(StartButton.Location.X, StartButton.Location.Y - 4);
         }
-        //e Анимация кнопки
-
-
 
         //Stop Button
         private void StopButton_Click(object sender, EventArgs e)
@@ -223,7 +198,6 @@ namespace PomodoroTimer
             StopButton.Location = new Point(StopButton.Location.X, StopButton.Location.Y - 4);
         }
 
-        
         
         //Pause Button
         private void PauseButon_Click(object sender, EventArgs e)
