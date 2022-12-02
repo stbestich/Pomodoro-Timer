@@ -35,6 +35,8 @@
             this.TimeIsUpLable = new System.Windows.Forms.Label();
             this.OKButton = new Guna.UI2.WinForms.Guna2Button();
             this.OKButtonPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // ShortBreakPanel
@@ -50,6 +52,7 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this.OKButtonPanel;
             // 
             // TimeIsUpLable
             // 
@@ -85,6 +88,9 @@
             this.OKButton.Text = "OK ^_^";
             this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             this.OKButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OKButton_MouseDown);
+            this.OKButton.MouseEnter += new System.EventHandler(this.OKButton_MouseEnter);
+            this.OKButton.MouseLeave += new System.EventHandler(this.OKButton_MouseLeave);
+            this.OKButton.MouseHover += new System.EventHandler(this.OKButton_MouseHover);
             this.OKButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OKButton_MouseUp);
             // 
             // OKButtonPanel
@@ -96,6 +102,16 @@
             this.OKButtonPanel.Size = new System.Drawing.Size(130, 16);
             this.OKButtonPanel.TabIndex = 23;
             this.OKButtonPanel.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // TimeIsUpForm
             // 
@@ -113,6 +129,7 @@
             this.Name = "TimeIsUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POMODORO! *NEW MESSAGE!";
+            this.Load += new System.EventHandler(this.TimeIsUpForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +141,7 @@
         private System.Windows.Forms.Label TimeIsUpLable;
         private Guna.UI2.WinForms.Guna2Button OKButton;
         private Guna.UI2.WinForms.Guna2Panel OKButtonPanel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
