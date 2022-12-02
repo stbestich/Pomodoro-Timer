@@ -10,7 +10,8 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
-
+using Guna.UI2.WinForms;
+using System.Runtime.CompilerServices;
 
 namespace PomodoroTimer
 {
@@ -41,7 +42,9 @@ namespace PomodoroTimer
             LogoBox.Hide();
             guna2Button1.Hide();
             guna2Button2.Hide();
+            guna2Button3.Hide();
 
+            guna2Panel1.Hide();
             ShortBreakPanel.Hide();
             LongBreakPanel.Hide();
 
@@ -66,7 +69,9 @@ namespace PomodoroTimer
             LogoBox.Show();
             guna2Button1.Show();
             guna2Button2.Show();
+            guna2Panel1.Show();
 
+            guna2Button3.Show();
             ShortBreakPanel.Show();
             LongBreakPanel.Show();
 
@@ -114,6 +119,14 @@ namespace PomodoroTimer
             timerCtrl.Start();
         }
 
+        void MaxConcentrationBtn()
+        {
+            this.timeLeft = 60 * 60;
+            Minutes.Text = (this.timeLeft / 60).ToString("00");
+            Seconds.Text = (this.timeLeft % 60).ToString("00");
+            timerCtrl.Start();
+        }
+
         //s 5 minutes Break
         void shortBreak()
         {
@@ -122,7 +135,7 @@ namespace PomodoroTimer
             Seconds.Text = (this.timeLeft % 60).ToString("00");
             timerCtrl.Start();
         }
-        //e 5 minutes break
+        
 
         //s 15 minutes break
         void longBreak()
@@ -132,7 +145,7 @@ namespace PomodoroTimer
             Seconds.Text = (this.timeLeft % 60).ToString("00");
             timerCtrl.Start();
         }
-        //e 15 minutes break
+        
 
         private void timerCtrl_Tick(object sender, EventArgs e)
         {
@@ -272,6 +285,36 @@ namespace PomodoroTimer
         private void guna2Button2_MouseUp(object sender, MouseEventArgs e)
         {
             guna2Button2.Location = new Point(guna2Button2.Location.X, guna2Button2.Location.Y - 4);
+        }
+
+
+        //maxConcentrationBtn
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            TimerStarted();
+
+            Minutes.ForeColor = Color.FromArgb(255, 80, 80);
+            Seconds.ForeColor = Color.FromArgb(255, 80, 80);
+            StopPanel.BackColor = Color.FromArgb(255, 80, 80);
+            UnpausePanel.BackColor = Color.FromArgb(255, 80, 80);
+            PlayPanel.BackColor = Color.FromArgb(255, 80, 80);
+
+            StopButton.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\stop1_48px.png");
+            PauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\pause1_52px.png");
+            UnpauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\play1_48px.png");
+            
+            MaxConcentrationBtn();
+        }
+
+        private void guna2Button3_MouseDown(object sender, MouseEventArgs e)
+        {
+            guna2Button3.Location = new Point(guna2Button3.Location.X, guna2Button3.Location.Y + 4);
+            ButtonSoundEffect();
+        }
+
+        private void guna2Button3_MouseUp(object sender, MouseEventArgs e)
+        {
+            guna2Button3.Location = new Point(guna2Button3.Location.X, guna2Button3.Location.Y - 4);
         }
     }
 }
