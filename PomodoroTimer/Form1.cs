@@ -12,11 +12,20 @@ using System.Windows.Forms;
 using System.Media;
 using Guna.UI2.WinForms;
 using System.Runtime.CompilerServices;
+using System.IO;
+using WindowsInput.Events;
 
 namespace PomodoroTimer
 {
     public partial class Form1 : Form
     {
+        public Form1()
+        {
+            InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+
         #region --Ненужные методы--
         private void Seconds_Click(object sender, EventArgs e)
         {
@@ -106,6 +115,7 @@ namespace PomodoroTimer
             SoundPlayer TimerStoppedSoundEffect = new SoundPlayer(resourceStream1);
             TimerStoppedSoundEffect.Play(); 
         }
+
         #endregion
 
         #region --Управление Таймером--
@@ -155,6 +165,7 @@ namespace PomodoroTimer
                 TimerStoppedSoundEffect();
                 TimeIsUpForm messageform = new TimeIsUpForm();
                 messageform.ShowDialog();
+                TimerStoped();
             }
             else
             {
@@ -165,12 +176,6 @@ namespace PomodoroTimer
         }
         #endregion
 
-
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -187,9 +192,9 @@ namespace PomodoroTimer
             UnpausePanel.BackColor = Color.FromArgb(65, 157, 120);
             PlayPanel.BackColor = Color.FromArgb(65, 157, 120);
 
-            StopButton.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\stop_48px.png");
-            PauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\pause_52px.png");
-            UnpauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\play_48px.png");
+            StopButton.BackgroundImage = Properties.Resources.stop_48px;
+            PauseButon.BackgroundImage = Properties.Resources.pause_52px;
+            UnpauseButon.BackgroundImage = Properties.Resources.play_48px;
 
             TimerControl();
         }
@@ -265,6 +270,17 @@ namespace PomodoroTimer
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             TimerStarted();
+
+            Minutes.ForeColor = Color.FromArgb(65, 157, 120);
+            Seconds.ForeColor = Color.FromArgb(65, 157, 120);
+            StopPanel.BackColor = Color.FromArgb(65, 157, 120);
+            UnpausePanel.BackColor = Color.FromArgb(65, 157, 120);
+            PlayPanel.BackColor = Color.FromArgb(65, 157, 120);
+
+            StopButton.BackgroundImage = Properties.Resources.stop_48px;
+            PauseButon.BackgroundImage = Properties.Resources.pause_52px;
+            UnpauseButon.BackgroundImage = Properties.Resources.play_48px;
+
             shortBreak();
         }
 
@@ -285,6 +301,17 @@ namespace PomodoroTimer
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
             TimerStarted();
+
+            Minutes.ForeColor = Color.FromArgb(65, 157, 120);
+            Seconds.ForeColor = Color.FromArgb(65, 157, 120);
+            StopPanel.BackColor = Color.FromArgb(65, 157, 120);
+            UnpausePanel.BackColor = Color.FromArgb(65, 157, 120);
+            PlayPanel.BackColor = Color.FromArgb(65, 157, 120);
+
+            StopButton.BackgroundImage = Properties.Resources.stop_48px;
+            PauseButon.BackgroundImage = Properties.Resources.pause_52px;
+            UnpauseButon.BackgroundImage = Properties.Resources.play_48px;
+
             longBreak();
         }
 
@@ -311,9 +338,9 @@ namespace PomodoroTimer
             UnpausePanel.BackColor = Color.FromArgb(255, 80, 80);
             PlayPanel.BackColor = Color.FromArgb(255, 80, 80);
 
-            StopButton.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\stop1_48px.png");
-            PauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\pause1_52px.png");
-            UnpauseButon.BackgroundImage = Image.FromFile(@"P:\Programming\C#\Pomodoro-Timer\PomodoroTimer\Assets\play1_48px.png");
+            StopButton.BackgroundImage = Properties.Resources.stop1_48px;
+            PauseButon.BackgroundImage = Properties.Resources.pause1_52px;
+            UnpauseButon.BackgroundImage = Properties.Resources.play1_48px;
             
             MaxConcentrationBtn();
         }
@@ -330,3 +357,4 @@ namespace PomodoroTimer
         }
     }
 }
+

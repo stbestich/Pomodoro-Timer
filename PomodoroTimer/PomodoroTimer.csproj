@@ -66,6 +66,10 @@
     <Compile Include="TimeIsUpForm.Designer.cs">
       <DependentUpon>TimeIsUpForm.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\pause48_px.png" />
+    <EmbeddedResource Include="Assets\play_48px.png" />
+    <None Include="Assets\pause_48px.png" />
+    <Content Include="Assets\stop_48px.png" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TimeIsUpForm.resx">
       <DependentUpon>TimeIsUpForm.cs</DependentUpon>
@@ -98,11 +103,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".nuget\mouse-keyboard-hook-logo.png" />
+    <EmbeddedResource Include="Assets\play1_48px.png" />
+    <EmbeddedResource Include="Assets\pause1_52px.png" />
+    <EmbeddedResource Include="Assets\stop1_48px.png" />
+    <EmbeddedResource Include="Assets\pause_52px.png" />
     <EmbeddedResource Include="TimerStoppedSoundEffect.wav" />
     <EmbeddedResource Include="pressedButtonSound.wav" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -124,7 +124,6 @@
             // 
             this.PauseButon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PauseButon.BackColor = System.Drawing.Color.Transparent;
-            this.PauseButon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PauseButon.BackgroundImage")));
             this.PauseButon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PauseButon.BorderRadius = 4;
             this.PauseButon.BorderThickness = 3;
